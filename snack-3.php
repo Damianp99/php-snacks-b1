@@ -8,9 +8,9 @@ $randoms = [];
 
 
 for ($i = 0; $i <= $total; $i++) {
-    $randomNumbers = rand(1, 50);
+    $randomNumbers = rand(1, 100);
     while (in_array($randomNumbers, $randoms)) {
-        $randomNumbers = rand(1, 50);
+        $randomNumbers = rand(1, 100);
     }
     $randoms[] = $randomNumbers;
 }
