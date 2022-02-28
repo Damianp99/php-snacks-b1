@@ -8,6 +8,7 @@ $mail = $_GET['mail'] ?? '';
 $age = $_GET['age'] ?? '';
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@ $age = $_GET['age'] ?? '';
             <input type="text" name="mail" placeholder="Inserisci la tua E-mail">
             <input type="text" name="age" placeholder="Inserisci la tua età">
             <button type="submit">Invia</button>
-            <?php if (strlen($name) > 3 && is_numeric($age)) { ?>
+            <?php if (strlen($name) > 3 && is_numeric($age) && strpos($mail, '@') && strpos($mail, '.')) { ?>
                 <small> Accesso riuscito</small>
             <?php } else { ?>
                 <small>Accesso Negato</small>
